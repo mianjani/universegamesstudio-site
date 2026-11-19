@@ -4,151 +4,253 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UNIVERSE GAMES STUDIO (UGS) (SMC-PRIVATE) LIMITED</title>
-  <meta name="description" content="Official Portal of UNIVERSE GAMES STUDIO (UGS) (SMC-PRIVATE) LIMITED. Independent game development and publishing firm incorporated in Lahore, Pakistan.">
   <style>
-    :root {
-      --bg: #0b0f19;
-      --card-bg: #131b2e;
-      --accent: #2563eb;
-      --accent-hover: #1d4ed8;
-      --text: #f8fafc;
-      --text-muted: #94a3b8;
-      --border: #1e293b;
-      --card-inner: #1a243a;
-    }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #0b0f19;
+      color: #f8fafc;
+      line-height: 1.6;
+      padding: 0;
     }
     header {
-      padding: 60px 20px 40px;
+      padding: 50px 20px 30px;
       text-align: center;
-      background: radial-gradient(circle at top, #1e293b 0%, var(--bg) 75%);
-      border-bottom: 1px solid var(--border);
+      background: #111827;
+      border-bottom: 1px solid #1f2937;
     }
     .badge {
       display: inline-block;
-      padding: 5px 14px;
-      background: rgba(37, 99, 235, 0.15);
+      padding: 4px 12px;
+      background: rgba(37, 99, 235, 0.2);
       color: #60a5fa;
       border-radius: 20px;
       font-size: 0.8rem;
       font-weight: 600;
-      letter-spacing: 0.5px;
       margin-bottom: 12px;
       text-transform: uppercase;
-      border: 1px solid rgba(37, 99, 235, 0.3);
+      border: 1px solid rgba(37, 99, 235, 0.4);
     }
     h1 {
-      font-size: 2.2rem;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      margin-bottom: 10px;
-      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+      color: #ffffff;
     }
     header p {
-      color: var(--text-muted);
-      font-size: 1.05rem;
-      max-width: 700px;
+      color: #94a3b8;
+      font-size: 1rem;
+      max-width: 600px;
       margin: 0 auto;
     }
     nav {
       display: flex;
       justify-content: center;
       gap: 10px;
-      padding: 15px 20px;
-      background: rgba(19, 27, 46, 0.8);
-      position: sticky;
-      top: 0;
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--border);
-      z-index: 100;
+      padding: 12px 20px;
+      background: #131b2e;
+      border-bottom: 1px solid #1e293b;
       flex-wrap: wrap;
     }
     nav button {
       background: transparent;
-      border: 1px solid transparent;
-      color: var(--text-muted);
-      padding: 8px 18px;
-      border-radius: 8px;
+      border: 1px solid #334155;
+      color: #cbd5e1;
+      padding: 8px 16px;
+      border-radius: 6px;
       font-weight: 600;
       cursor: pointer;
-      font-size: 0.95rem;
-      transition: all 0.2s ease;
-    }
-    nav button:hover {
-      color: var(--text);
-      background: rgba(255, 255, 255, 0.05);
+      font-size: 0.9rem;
     }
     nav button.active {
-      background: var(--accent);
+      background: #2563eb;
       color: #fff;
+      border-color: #2563eb;
     }
     .container {
       max-width: 900px;
       margin: 0 auto;
-      padding: 40px 20px 80px;
+      padding: 30px 20px 60px;
     }
-    .tab-content {
-      display: none;
-      animation: fadeIn 0.3s ease;
-    }
-    .tab-content.active {
-      display: block;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(6px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
     .card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 30px;
-      margin-bottom: 25px;
-    }
-    h2 {
-      font-size: 1.5rem;
-      margin-bottom: 16px;
-      color: #fff;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 8px;
-    }
-    h3 {
-      font-size: 1.15rem;
-      margin: 20px 0 10px;
-      color: #e2e8f0;
-    }
-    p { margin-bottom: 14px; color: #cbd5e1; font-size: 0.98rem; }
-    ul { margin: 10px 0 18px 25px; color: #cbd5e1; }
-    li { margin-bottom: 6px; }
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
-    }
-    .feature-item {
-      background: var(--card-inner);
-      padding: 18px;
+      background: #131b2e;
+      border: 1px solid #1e293b;
       border-radius: 10px;
-      border: 1px solid var(--border);
+      padding: 25px;
+      margin-bottom: 20px;
     }
-    .feature-item h4 {
-      font-size: 1.05rem;
+    h2 { font-size: 1.3rem; margin-bottom: 12px; color: #fff; border-bottom: 1px solid #1e293b; padding-bottom: 6px; }
+    h3 { font-size: 1.05rem; margin: 16px 0 8px; color: #60a5fa; }
+    p { margin-bottom: 12px; color: #cbd5e1; font-size: 0.95rem; }
+    ul { margin: 8px 0 16px 20px; color: #cbd5e1; }
+    li { margin-bottom: 6px; font-size: 0.95rem; }
+    .compliance-strip {
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+      margin-top: 30px;
+    }
+    .compliance-strip a {
       color: #60a5fa;
-      margin-bottom: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 8px;
     }
-    .info-list {
-      list-style: none;
-      margin: 15px 0 0;
-      padding: 0;
+    footer {
+      text-align: center;
+      padding: 25px 20px;
+      border-top: 1px solid #1e293b;
+      color: #94a3b8;
+      font-size: 0.85rem;
     }
-    .info-list li {
-      padding: 10px 0;
-      border
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="badge">SECP Registered Entity</div>
+    <h1>UNIVERSE GAMES STUDIO (UGS) (SMC-PRIVATE) LIMITED</h1>
+    <p>Premier independent game development and publishing firm incorporated in Lahore, Pakistan.</p>
+  </header>
+
+  <nav>
+    <button class="active" onclick="openTab('about', this)">About Studio</button>
+    <button onclick="openTab('contact', this)">Get In Touch</button>
+    <button onclick="openTab('privacy', this)">Privacy Policy</button>
+    <button onclick="openTab('terms', this)">Terms & Conditions</button>
+  </nav>
+
+  <div class="container">
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="tab-content active">
+      <div class="card">
+        <h2>Overview</h2>
+        <p>UNIVERSE GAMES STUDIO(UGS) (SMC-PRIVATE) LIMITED is a premier, independent game development and publishing firm incorporated in Lahore, Pakistan. As a registered entity under the Securities and Exchange Commission of Pakistan (SECP), we operate with a commitment to legal transparency and professional excellence in the digital entertainment industry.</p>
+      </div>
+
+      <div class="card">
+        <h2>Our Core Expertise</h2>
+        <p>Driven by a passion for innovation and storytelling, we specialize in the end-to-end lifecycle of high-quality mobile applications and interactive software. Our studio leverages industry-standard technologies to deliver seamless experiences to a global audience.</p>
+        <ul>
+          <li><strong>Game Design & Prototyping:</strong> Transforming original intellectual property into engaging, playable digital experiences.</li>
+          <li><strong>Engine Excellence:</strong> Advanced development using the Unity Engine to ensure robust, scalable, and cross-platform performance.</li>
+          <li><strong>Product Lifecycle Management:</strong> From initial concept to global publishing and continuous post-launch optimization.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Our Vision & Commitment</h2>
+        <p>At UGS, we believe games are digital universes. Our mission is to bridge the gap between complex technology and pure entertainment. Every project within our portfolio undergoes rigorous quality assurance to meet international standards of performance and user engagement.</p>
+        <h3>Corporate Identity</h3>
+        <p>We are dedicated to expanding our footprint in the global mobile gaming ecosystem through strategic partnerships and innovative software solutions.</p>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="tab-content">
+      <div class="card">
+        <h2>Get In Touch</h2>
+        <p>Have a question about our games or want to discuss a potential collaboration? We’d love to hear from you. At Universe Games Studio(UGS) (SMC-PRIVATE) LIMITED, we value clear communication and are always open to feedback.</p>
+        
+        <h3>Contact Information</h3>
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:info@universegamesstudio.com" style="color: #60a5fa;">info@universegamesstudio.com</a></li>
+          <li><strong>Office Location:</strong> House No. D-201, Muhallah Chiri Maran, Inside Mori Gate, Lahore</li>
+          <li><strong>Business Hours:</strong> Monday – Friday (9:00 AM – 6:00 PM PKT)</li>
+        </ul>
+
+        <h3>Follow Our Journey</h3>
+        <p>We are constantly working on new updates and exciting titles. Stay tuned for more updates from our studio.</p>
+      </div>
+    </section>
+
+    <!-- PRIVACY POLICY SECTION -->
+    <section id="privacy" class="tab-content">
+      <div class="card">
+        <h2>Privacy Policy</h2>
+        <p><strong>Developer:</strong> UNIVERSE GAMES STUDIO(UGS) (SMC-PRIVATE) LIMITED<br>
+        <strong>Effective Date:</strong> March 23, 2026 | <strong>Last Updated:</strong> March 23, 2026</p>
+
+        <h3>1. Introduction</h3>
+        <p>This Privacy Policy outlines how UNIVERSE GAMES STUDIO(UGS) (SMC-PRIVATE) LIMITED (“we”, “us”, or “our”) manages your information when you interact with our mobile applications, specifically Animal Kingdom Merge Animal (the “Game”). By installing or using our Game, you signify your agreement to the terms described in this policy.</p>
+
+        <h3>2. Information We Collect</h3>
+        <p><strong>2.1 Automatically Collected Information:</strong> Device hardware model, Operating System version, IP address, Device language/timezone, Unique Advertising Identifiers (Google/Samsung ID), gameplay metrics, and diagnostic crash reports.</p>
+        <p><strong>2.2 In-App Purchases:</strong> All financial transactions are processed securely through platform stores (e.g. Samsung Galaxy Store). We do not store or access your credit card details.</p>
+        <p><strong>2.3 Customer Support:</strong> If you contact us, we collect your email address and request history.</p>
+
+        <h3>3. Advertising & Mediation</h3>
+        <p>To keep our games free to play, we display third-party advertisements via partners including Unity Ads, AppLovin MAX, Google AdMob, and Mintegral.</p>
+
+        <h3>4. How We Use Your Data</h3>
+        <p>To operate game functionality, synchronize progress, troubleshoot bugs, optimize advertising, and verify in-app purchases.</p>
+
+        <h3>5. Children’s Privacy</h3>
+        <p>Our Game is intended for a general audience and is not specifically directed at children under the age of 13.</p>
+
+        <h3>6. Data Sharing & Retention</h3>
+        <p>We share information only with authorized ad partners, analytics services, and legal authorities as required by law. We do not sell personal data.</p>
+
+        <h3>7. Contact Information</h3>
+        <ul>
+          <li><strong>Developer Name:</strong> UNIVERSE GAMES STUDIO(UGS) (SMC-PRIVATE) LIMITED</li>
+          <li><strong>Address:</strong> House No. D-201, Muhallah Chiri Maran, Inside Mori Gate, Lahore</li>
+          <li><strong>Email:</strong> info@universegamesstudio.com</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TERMS SECTION -->
+    <section id="terms" class="tab-content">
+      <div class="card">
+        <h2>Terms and Conditions</h2>
+        <h3>1. Agreement to Terms</h3>
+        <p>By accessing and using the website and our mobile games, you agree to be bound by these Terms and Conditions.</p>
+
+        <h3>2. Intellectual Property Rights</h3>
+        <p>All content, including games, logos (UGS), graphics, and code, is the intellectual property of Universe Games Studio(UGS) (SMC-PRIVATE) LIMITED.</p>
+
+        <h3>3. User Conduct</h3>
+        <p>Users must not attempt to hack, reverse engineer, or use automated systems (bots) on our games or services.</p>
+
+        <h3>4. Limitation of Liability</h3>
+        <p>Universe Games Studio(UGS) provides games "as is" and is not responsible for damages or technical issues resulting from use.</p>
+
+        <h3>5. Contact Us</h3>
+        <p>Email: <a href="mailto:info@universegamesstudio.com" style="color: #60a5fa;">info@universegamesstudio.com</a><br>Location: House No. D-201, Muhallah Chiri Maran, Inside Mori Gate, Lahore</p>
+      </div>
+    </section>
+
+    <!-- Compliance / App-Ads.txt quick link -->
+    <div class="compliance-strip">
+      <span>Developer Compliance Verification:</span>
+      <a href="/app-ads.txt" target="_blank">app-ads.txt</a> | 
+      <a href="/ads.txt" target="_blank">ads.txt</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 UNIVERSE GAMES STUDIO (UGS) (SMC-PRIVATE) LIMITED. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function openTab(tabId, el) {
+      var contents = document.querySelectorAll('.tab-content');
+      contents.forEach(function(c) { c.classList.remove('active'); });
+
+      var buttons = document.querySelectorAll('nav button');
+      buttons.forEach(function(b) { b.classList.remove('active'); });
+
+      document.getElementById(tabId).classList.add('active');
+      el.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
