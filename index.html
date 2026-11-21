@@ -3,207 +3,97 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Universe Games Studio (UGS) (SMC-Private) Limited | Mobile Game Developer, Lahore</title>
-<meta name="description" content="Universe Games Studio (UGS) (SMC-Private) Limited is a mobile game developer and publisher in Lahore, Pakistan. Games: Arrow Out, Animal Kingdom Merge Animal, Snake Escape.">
-<style>
-:root{--bg:#fbfaf7;--ink:#14213d;--muted:#55607a;--line:#d9dce4;--accent:#1d4ed8;--panel:#f1f3f8}
-@media (prefers-color-scheme:dark){:root{--bg:#0f1523;--ink:#e8ecf5;--muted:#9aa5bd;--line:#26314a;--accent:#7aa2ff;--panel:#171f33}}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:70px}
-body{font:16px/1.7 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink)}
-a{color:var(--accent)}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-.wrap{max-width:860px;margin:0 auto;padding:0 20px}
-header.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:10}
-.top .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px;padding-top:12px;padding-bottom:12px}
-.brand{font:700 1.05rem Georgia,"Times New Roman",serif;color:var(--ink);text-decoration:none}
-.top nav{display:flex;flex-wrap:wrap;gap:4px 16px;margin-left:auto}
-.top nav a{color:var(--muted);text-decoration:none;font-size:.92rem}
-.top nav a:hover{color:var(--accent);text-decoration:underline}
-.intro{padding:64px 0 36px;border-bottom:1px solid var(--line)}
-h1{font:700 clamp(1.9rem,5vw,2.8rem)/1.15 Georgia,"Times New Roman",serif;letter-spacing:-.01em;max-width:20ch}
-.intro p{margin-top:16px;color:var(--muted);max-width:62ch}
-section{padding:44px 0;border-bottom:1px solid var(--line)}
-h2{font:700 1.6rem Georgia,"Times New Roman",serif;margin-bottom:14px}
-h3{font-size:1.02rem;margin:22px 0 6px}
-p,li{color:var(--ink);opacity:.9}
-p{margin-bottom:12px;max-width:72ch}
-ul{margin:6px 0 14px 22px;max-width:72ch}
-li{margin-bottom:5px}
-.games{margin-top:10px;border-top:1px solid var(--line)}
-.game{display:grid;grid-template-columns:1fr 1fr;gap:6px 28px;padding:20px 0;border-bottom:1px solid var(--line)}
-.game h3{margin:0;font:700 1.2rem Georgia,"Times New Roman",serif}
-.game p{margin:0;color:var(--muted)}
-.pkg{font:.82rem ui-monospace,Menlo,Consolas,monospace;color:var(--muted);word-break:break-all}
-.where{grid-column:1/-1;font-size:.9rem}
-dl{display:grid;grid-template-columns:170px 1fr;gap:10px 18px;margin-top:8px;max-width:72ch}
-dt{color:var(--muted);font-size:.92rem}
-dd{margin:0}
-address{font-style:normal;background:var(--panel);border-left:3px solid var(--accent);padding:14px 18px;margin-top:10px;max-width:72ch}
-.meta{color:var(--muted);font-size:.92rem;margin-bottom:18px}
-footer{padding:30px 0 50px;color:var(--muted);font-size:.9rem}
-footer a{margin-right:14px}
-@media (max-width:640px){.game{grid-template-columns:1fr}dl{grid-template-columns:1fr;gap:2px}dt{margin-top:8px}.top nav{margin-left:0}}
-</style>
+<title>Universe Games Studio | Free Mobile Puzzle &amp; Casual Games</title>
+<meta name="description" content="Universe Games Studio (UGS) (SMC-Private) Limited, Lahore, Pakistan. Free mobile games: Arrow Out, Animal Kingdom Merge Animal and Snake Escape.">
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
-<header class="top"><div class="wrap">
-<a class="brand" href="#top">Universe Games Studio</a>
-<nav aria-label="Main">
-<a href="#games">Games</a><a href="#about">About</a><a href="/privacy-policy">Privacy Policy</a><a href="/terms-and-conditions">Terms</a><a href="#contact">Contact</a>
-</nav>
+<header class="bar"><div class="bar-in">
+<a class="logo" href="/"><i></i>Universe Games</a>
+<div class="search"><input id="q" type="search" placeholder="Search games" aria-label="Search games"></div>
+<nav class="toplinks" aria-label="Main"><a href="#about">About</a><a href="/privacy-policy">Privacy Policy</a><a href="/terms-and-conditions">Terms</a><a href="#contact">Contact</a></nav>
 </div></header>
 
-<main id="top">
-<div class="wrap">
+<div class="shell">
+<aside class="side" aria-label="Categories">
+<button data-c="all" aria-pressed="true">All games</button>
+<button data-c="puzzle" aria-pressed="false">Puzzle</button>
+<button data-c="casual" aria-pressed="false">Casual</button>
+<button data-c="merge" aria-pressed="false">Merge</button>
+</aside>
 
-<div class="intro">
-<h1>Mobile puzzle and casual games, made in Lahore.</h1>
-<p>Universe Games Studio (UGS) (SMC-Private) Limited is an independent game developer and publisher incorporated in Pakistan. We build our games in the Unity Engine and publish them on Android app stores.</p>
-</div>
+<main>
+<h1>Free games from Universe Games Studio</h1>
+<p class="sub">Tap a game to see details and where to download it.</p>
+<div class="grid" id="grid">
 
-<section id="games">
-<h2>Our games</h2>
-<p>All games are free to play and supported by ads. Some include optional in-app purchases.</p>
-<div class="games">
-<article class="game">
-<div><h3>Arrow Out: Block Tap Away</h3><span class="pkg">com.gs.ugs.tapout.arrowgame (Samsung)<br>com.amz.ugs.tapout.arrowgame (Amazon)</span></div>
-<p>A 3D puzzle game. Tap each arrow block in the right order so it can slide away without hitting another block.</p>
-<p class="where">Available on <a href="https://galaxystore.samsung.com/detail/com.gs.ugs.tapout.arrowgame" rel="noopener">Samsung Galaxy Store</a>, Amazon Appstore and Huawei AppGallery.</p>
-</article>
-<article class="game">
-<div><h3>Animal Kingdom: Merge Animal</h3></div>
-<p>A merge game. Combine matching animals to unlock new creatures and grow your kingdom.</p>
-<p class="where">Available on Samsung Galaxy Store.</p>
-</article>
-<article class="game">
-<div><h3>Snake Escape: Slither Maze</h3><span class="pkg">com.gs.ugs.snakeout.games</span></div>
-<p>A 3D maze puzzle. Guide each snake out of a tangled board without blocking the others.</p>
-<p class="where">Available on <a href="https://galaxystore.samsung.com/detail/com.gs.ugs.snakeout.games" rel="noopener">Samsung Galaxy Store</a>.</p>
-</article>
-</div>
-</section>
+<button class="tile big" data-c="puzzle" data-n="arrow out block tap away" data-d="d-arrow">
+<svg viewBox="0 0 200 200" aria-hidden="true"><rect width="200" height="200" fill="#ff6b3d"/><rect x="30" y="30" width="140" height="140" rx="26" fill="#ffb347"/><path d="M60 100h66M104 70l34 30-34 30" fill="none" stroke="#14123a" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<span>Arrow Out: Block Tap Away</span></button>
 
-<section id="about">
-<h2>About us</h2>
-<p>Universe Games Studio (UGS) (SMC-Private) Limited is a game development and publishing company incorporated in Lahore, Pakistan, and registered with the Securities and Exchange Commission of Pakistan (SECP).</p>
-<p>We design, build, test and publish our own mobile games, and we keep them updated after launch. Every game is tested for stability and performance on a range of Android devices before release.</p>
-<dl>
-<dt>Legal name</dt><dd>Universe Games Studio (UGS) (SMC-Private) Limited</dd>
-<dt>Location</dt><dd>Lahore, Punjab, Pakistan</dd>
-<dt>Engine</dt><dd>Unity</dd>
-<dt>Platforms</dt><dd>Android (Samsung Galaxy Store, Amazon Appstore, Huawei AppGallery)</dd>
-</dl>
-</section>
+<button class="tile" data-c="merge casual" data-n="animal kingdom merge animal" data-d="d-animal">
+<svg viewBox="0 0 200 200" aria-hidden="true"><rect width="200" height="200" fill="#2fbf71"/><circle cx="62" cy="62" r="22" fill="#d79a4f"/><circle cx="138" cy="62" r="22" fill="#d79a4f"/><circle cx="100" cy="106" r="52" fill="#f2b866"/><circle cx="82" cy="98" r="7" fill="#14123a"/><circle cx="118" cy="98" r="7" fill="#14123a"/><ellipse cx="100" cy="122" rx="14" ry="10" fill="#14123a"/></svg>
+<span>Animal Kingdom: Merge Animal</span></button>
 
-<section id="privacy">
-<span id="privacy-policy"></span>
-<h2>Privacy Policy</h2>
-<p class="meta">Effective March 23, 2026. Last updated November 21, 2026.</p>
-
-<h3>1. Who we are</h3>
-<p>This policy explains how Universe Games Studio (UGS) (SMC-Private) Limited (“we”, “us”, “our”) handles information when you play our games: Arrow Out: Block Tap Away, Animal Kingdom Merge Animal and Snake Escape: Slither Maze (the “Games”). By installing or playing a Game, you agree to this policy.</p>
-
-<h3>2. Information we collect</h3>
-<p>The Games and the third-party services inside them may automatically collect:</p>
-<ul>
-<li>Device model and operating system version.</li>
-<li>IP address, used to estimate your country.</li>
-<li>Device language and time zone.</li>
-<li>Advertising identifiers, such as the Google Advertising ID or Samsung advertising ID.</li>
-<li>Gameplay data, such as levels reached, scores and in-game events.</li>
-<li>Crash and performance reports.</li>
-</ul>
-<p>We do not ask you to create an account and we do not collect your name, phone number or precise location.</p>
-
-<h3>3. In-app purchases</h3>
-<p>Purchases are processed by the app store you use (for example Samsung Galaxy Store or Amazon Appstore). We never see or store your card or bank details. We only receive confirmation of the item bought, the time and your country.</p>
-
-<h3>4. Advertising</h3>
-<p>The Games show third-party ads. These partners may use your advertising ID and IP address to show ads and to prevent fraud. Each partner has its own privacy policy:</p>
-<ul>
-<li><a href="https://www.inmobi.com/privacy-policy" rel="noopener">InMobi</a></li>
-<li><a href="https://unity.com/legal/privacy-policy" rel="noopener">Unity Ads</a></li>
-<li><a href="https://www.applovin.com/privacy/" rel="noopener">AppLovin MAX</a></li>
-<li><a href="https://www.mintegral.com/en/privacy" rel="noopener">Mintegral</a></li>
-<li><a href="https://policies.google.com/privacy" rel="noopener">Google AdMob</a></li>
-<li><a href="https://www.toponad.com/en/privacy-policy" rel="noopener">TopOn (ad mediation)</a></li>
-</ul>
-<p>You can limit ad personalization on Android: Settings &gt; Google &gt; Ads &gt; Delete advertising ID (menu names vary by device).</p>
-
-<h3>5. How we use information</h3>
-<ul>
-<li>To run the Games and keep them stable.</li>
-<li>To save your progress on your device.</li>
-<li>To find and fix bugs.</li>
-<li>To show ads and measure how they perform.</li>
-<li>To confirm in-app purchases.</li>
-</ul>
-
-<h3>6. Sharing</h3>
-<p>We share information only with our advertising and analytics partners listed above, and with authorities when the law requires it. We do not sell your personal information.</p>
-
-<h3>7. Children</h3>
-<p>The Games are for a general audience and are not directed at children under 13. We do not knowingly collect personal data from children. If you think a child has given us personal data, email us and we will delete it.</p>
-
-<h3>8. Retention and transfers</h3>
-<p>We keep information only as long as needed to run the Games, meet legal duties or settle disputes. Our partners may process data on servers outside your country.</p>
-
-<h3>9. Your rights</h3>
-<p>Depending on where you live, you may ask to access, correct or delete the data we hold about you. Email <a href="mailto:info@universegamesstudio.com">info@universegamesstudio.com</a> with the subject “Data request”.</p>
-
-<h3>10. Security</h3>
-<p>We use reasonable technical measures to protect information. No method of storage or transmission is completely secure.</p>
-
-<h3>11. Changes</h3>
-<p>If we change this policy, we will update the “Last updated” date above.</p>
-
-<h3>12. Contact</h3>
-<address>Universe Games Studio (UGS) (SMC-Private) Limited<br>House No. D-201, Muhallah Chiri Maran, Inside Mori Gate, Lahore, Pakistan<br><a href="mailto:info@universegamesstudio.com">info@universegamesstudio.com</a></address>
-</section>
-
-<section id="terms">
-<span id="terms-and-conditions"></span>
-<h2>Terms and Conditions</h2>
-<h3>1. Agreement</h3>
-<p>By using this website or our Games, you agree to these terms. If you do not agree, please do not use them.</p>
-<h3>2. Intellectual property</h3>
-<p>The Games, logos, graphics, audio and code belong to Universe Games Studio (UGS) (SMC-Private) Limited. You may not copy, sell or distribute them without our written permission.</p>
-<h3>3. Acceptable use</h3>
-<p>Use the Games and website lawfully. Do not:</p>
-<ul>
-<li>hack, or interfere with the security of, the Games;</li>
-<li>use bots or automated tools to access our services;</li>
-<li>reverse engineer or extract files from the Games.</li>
-</ul>
-<h3>4. Privacy</h3>
-<p>Your use of the Games is also covered by our <a href="#privacy">Privacy Policy</a>.</p>
-<h3>5. Liability</h3>
-<p>The Games are provided “as is”. To the extent the law allows, we are not responsible for technical problems, data loss or damages from using the Games or this website.</p>
-<h3>6. Changes</h3>
-<p>We may update these terms. Continuing to use the Games or website after an update means you accept the new terms.</p>
-<h3>7. Contact</h3>
-<p>Questions about these terms: <a href="mailto:info@universegamesstudio.com">info@universegamesstudio.com</a>.</p>
-</section>
-
-<section id="contact" style="border-bottom:0">
-<h2>Contact</h2>
-<p>For support, partnerships or data requests, email us. We reply on business days.</p>
-<dl>
-<dt>Email</dt><dd><a href="mailto:info@universegamesstudio.com">info@universegamesstudio.com</a></dd>
-<dt>Address</dt><dd>House No. D-201, Muhallah Chiri Maran, Inside Mori Gate, Lahore, Pakistan</dd>
-<dt>Hours</dt><dd>Monday to Friday, 9:00 AM to 6:00 PM (PKT)</dd>
-</dl>
-</section>
+<button class="tile" data-c="puzzle" data-n="snake escape slither maze" data-d="d-snake">
+<svg viewBox="0 0 200 200" aria-hidden="true"><rect width="200" height="200" fill="#6a4cff"/><path d="M40 150h70a30 30 0 0 0 0-60H80a20 20 0 0 1 0-40h70" fill="none" stroke="#7dffb0" stroke-width="22" stroke-linecap="round"/><circle cx="150" cy="50" r="5" fill="#14123a"/></svg>
+<span>Snake Escape: Slither Maze</span></button>
 
 </div>
+<p class="empty" id="none" hidden>No games match your search.</p>
 </main>
+</div>
 
-<footer><div class="wrap">
-<p>© 2026 Universe Games Studio (UGS) (SMC-Private) Limited, Lahore, Pakistan.</p>
-<p><a href="/privacy-policy">Privacy Policy</a><a href="/terms-and-conditions">Terms</a><a href="/app-ads.txt">app-ads.txt</a></p>
+<dialog id="d-arrow"><button class="close" data-x>Close</button>
+<div class="d-art"><svg viewBox="0 0 400 170" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="170" fill="#ff6b3d"/><rect x="150" y="25" width="100" height="120" rx="24" fill="#ffb347"/><path d="M172 85h44M200 65l22 20-22 20" fill="none" stroke="#14123a" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="d-body"><h2>Arrow Out: Block Tap Away</h2>
+<p>A 3D puzzle game. Tap each arrow block in the right order so it can slide away without hitting another block.</p>
+<div class="pkg">com.gs.ugs.tapout.arrowgame (Samsung)<br>com.amz.ugs.tapout.arrowgame (Amazon)</div>
+<a class="btn" href="https://galaxystore.samsung.com/detail/com.gs.ugs.tapout.arrowgame" target="_blank" rel="noopener">Samsung Galaxy Store</a>
+<p style="margin:0;font-size:.88rem">Also on Amazon Appstore and Huawei AppGallery.</p></div></dialog>
+
+<dialog id="d-animal"><button class="close" data-x>Close</button>
+<div class="d-art"><svg viewBox="0 0 400 170" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="170" fill="#2fbf71"/><circle cx="170" cy="55" r="22" fill="#d79a4f"/><circle cx="230" cy="55" r="22" fill="#d79a4f"/><circle cx="200" cy="95" r="48" fill="#f2b866"/><circle cx="184" cy="88" r="6" fill="#14123a"/><circle cx="216" cy="88" r="6" fill="#14123a"/><ellipse cx="200" cy="108" rx="12" ry="9" fill="#14123a"/></svg></div>
+<div class="d-body"><h2>Animal Kingdom: Merge Animal</h2>
+<p>A merge game. Combine matching animals to unlock new creatures and grow your kingdom.</p>
+<p style="margin:0;font-size:.88rem">Available on Samsung Galaxy Store.</p></div></dialog>
+
+<dialog id="d-snake"><button class="close" data-x>Close</button>
+<div class="d-art"><svg viewBox="0 0 400 170" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="170" fill="#6a4cff"/><path d="M120 130h110a28 28 0 0 0 0-56h-60a18 18 0 0 1 0-36h100" fill="none" stroke="#7dffb0" stroke-width="20" stroke-linecap="round"/></svg></div>
+<div class="d-body"><h2>Snake Escape: Slither Maze</h2>
+<p>A 3D maze puzzle. Guide each snake out of a tangled board without blocking the others.</p>
+<div class="pkg">com.gs.ugs.snakeout.games</div>
+<a class="btn" href="https://galaxystore.samsung.com/detail/com.gs.ugs.snakeout.games" target="_blank" rel="noopener">Samsung Galaxy Store</a></div></dialog>
+
+<div class="info">
+<section id="about"><h2>About us</h2>
+<p>Universe Games Studio (UGS) (SMC-Private) Limited is an independent game developer and publisher incorporated in Lahore, Pakistan, and registered with the Securities and Exchange Commission of Pakistan (SECP).</p>
+<p>We build our games in the Unity Engine and publish them on Android app stores.</p></section>
+<section id="contact"><h2>Contact</h2>
+<p>Email: <a href="mailto:info@universegamesstudio.com">info@universegamesstudio.com</a></p>
+<p>House No. D-201, Muhallah Chiri Maran, Inside Mori Gate, Lahore, Pakistan</p>
+<p>Monday to Friday, 9:00 AM to 6:00 PM (PKT)</p></section>
+<section><h2>Legal</h2>
+<p><a href="/privacy-policy">Privacy Policy</a></p>
+<p><a href="/terms-and-conditions">Terms and Conditions</a></p>
+<p><a href="/app-ads.txt">app-ads.txt</a></p></section>
+</div>
+
+<footer><div class="foot">
+<span>© 2026 Universe Games Studio (UGS) (SMC-Private) Limited, Lahore, Pakistan.</span>
+<span><a href="/privacy-policy">Privacy Policy</a><a href="/terms-and-conditions">Terms and Conditions</a><a href="mailto:info@universegamesstudio.com">Contact</a></span>
 </div></footer>
 
+<script>
+(function(){
+var tiles=[].slice.call(document.querySelectorAll('.tile')),btns=[].slice.call(document.querySelectorAll('.side button')),q=document.getElementById('q'),cat='all';
+function apply(){var s=q.value.trim().toLowerCase(),n=0;tiles.forEach(function(t){var ok=(cat==='all'||t.dataset.c.indexOf(cat)>-1)&&(!s||t.dataset.n.indexOf(s)>-1);t.hidden=!ok;if(ok)n++});document.getElementById('none').hidden=n>0}
+q.addEventListener('input',apply);
+btns.forEach(function(b){b.addEventListener('click',function(){cat=b.dataset.c;btns.forEach(function(x){x.setAttribute('aria-pressed',x===b)});apply()})});
+tiles.forEach(function(t){t.addEventListener('click',function(){var d=document.getElementById(t.dataset.d);if(d.showModal)d.showModal();else d.setAttribute('open','')})});
+[].forEach.call(document.querySelectorAll('dialog'),function(d){d.addEventListener('click',function(e){if(e.target===d||e.target.hasAttribute('data-x'))d.close()})});
+})();
+</script>
 </body>
 </html>
