@@ -3,320 +3,207 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Universe Games Studio (UGS) (SMC-Private) Limited | Mobile Game Developer & Publisher</title>
-<meta name="description" content="Universe Games Studio (UGS) is a SECP-registered mobile game developer and publisher based in Lahore, Pakistan. Makers of Arrow Out and Animal Kingdom.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<title>Universe Games Studio (UGS) (SMC-Private) Limited | Mobile Game Developer, Lahore</title>
+<meta name="description" content="Universe Games Studio (UGS) (SMC-Private) Limited is a mobile game developer and publisher in Lahore, Pakistan. Games: Arrow Out, Animal Kingdom Merge Animal, Snake Escape.">
 <style>
-:root{
-  --bg:#0a0e17; --card:#121927; --surface:#182235; --line:#25324a;
-  --blue:#3b82f6; --blue-d:#2563eb; --text:#f1f5f9; --muted:#9aa8bf; --green:#34d399;
-  --head:'Sora','Segoe UI',system-ui,sans-serif; --body:'Inter','Segoe UI',system-ui,sans-serif;
-}
-@media (prefers-color-scheme: light){
-  :root{--bg:#f4f7fc; --card:#ffffff; --surface:#eaf0fa; --line:#d5dfef; --text:#0f1b2e; --muted:#51617c; --blue:#2563eb; --blue-d:#1d4ed8; --green:#047857;}
-}
+:root{--bg:#fbfaf7;--ink:#14213d;--muted:#55607a;--line:#d9dce4;--accent:#1d4ed8;--panel:#f1f3f8}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1523;--ink:#e8ecf5;--muted:#9aa5bd;--line:#26314a;--accent:#7aa2ff;--panel:#171f33}}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--body);background:var(--bg);color:var(--text);line-height:1.7;font-size:16px;
-  -webkit-font-smoothing:antialiased}
-a{color:var(--blue)}
-:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:4px}
-
-/* top bar */
-.bar{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);
-  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.bar-in{max-width:1080px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
-.logo{font-family:var(--head);font-weight:800;font-size:1.25rem;color:var(--text);text-decoration:none;
-  display:flex;align-items:center;gap:10px;letter-spacing:-.02em}
-.logo i{width:30px;height:30px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#93c5fd,var(--blue) 45%,#1e3a8a);
-  box-shadow:0 0 0 3px color-mix(in srgb,var(--blue) 25%,transparent);display:inline-block;position:relative}
-.logo i::after{content:"";position:absolute;left:-5px;top:13px;width:40px;height:4px;border-radius:4px;
-  background:var(--text);opacity:.85;transform:rotate(-22deg)}
-nav{margin-left:auto;display:flex;gap:4px;flex-wrap:wrap}
-nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:.9rem;padding:8px 13px;border-radius:8px}
-nav a:hover{color:var(--text);background:var(--surface)}
-nav a.on{background:var(--blue);color:#fff}
-
-main{max-width:1080px;margin:0 auto;padding:0 20px 80px}
-.page{display:none}
-.page.on{display:block}
-
-/* hero */
-.hero{padding:80px 0 56px;display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
-.reg{display:inline-block;font-size:.82rem;font-weight:600;color:var(--green);
-  border:1px solid color-mix(in srgb,var(--green) 40%,transparent);padding:5px 14px;border-radius:99px;margin-bottom:22px}
-h1{font-family:var(--head);font-size:clamp(2rem,5vw,3.2rem);line-height:1.12;letter-spacing:-.03em;font-weight:800}
-.lead{color:var(--muted);font-size:1.08rem;margin:18px 0 28px;max-width:56ch}
-.btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;padding:12px 24px;border-radius:10px;font-weight:600;font-size:.95rem;text-decoration:none;
-  border:1px solid var(--blue);background:var(--blue);color:#fff;cursor:pointer;font-family:inherit}
-.btn:hover{background:var(--blue-d)}
-.btn.ghost{background:transparent;color:var(--text);border-color:var(--line)}
-.btn.ghost:hover{background:var(--surface)}
-
-/* orbit art (the one memorable element) */
-.orbit{aspect-ratio:1;width:100%;max-width:380px;margin:0 auto;position:relative}
-.orbit svg{width:100%;height:100%;overflow:visible}
-.spin{transform-origin:200px 200px;animation:spin 40s linear infinite}
-.spin.rev{animation-duration:62s;animation-direction:reverse}
-@keyframes spin{to{transform:rotate(360deg)}}
-@media (prefers-reduced-motion:reduce){.spin{animation:none}}
-
-/* sections */
-.sec{padding:44px 0 0}
-h2{font-family:var(--head);font-size:1.6rem;letter-spacing:-.02em;margin-bottom:6px}
-.sub{color:var(--muted);margin-bottom:24px;max-width:62ch}
-.games{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
-.game{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px;position:relative;overflow:hidden}
-.game:nth-child(2){border-radius:16px 16px 16px 40px}
-.game .tag{font-size:.8rem;color:var(--muted);font-weight:600;margin-bottom:10px}
-.game h3{font-family:var(--head);font-size:1.4rem;margin-bottom:8px}
-.game p{color:var(--muted);font-size:.95rem}
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;margin-top:44px;
-  border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.facts div{padding:22px 20px 22px 0}
-.facts b{display:block;font-family:var(--head);font-size:1rem;margin-bottom:2px}
-.facts span{color:var(--muted);font-size:.9rem}
-
-/* documents */
-.doc{max-width:760px;padding-top:56px}
-.doc h1{font-size:clamp(1.8rem,4vw,2.4rem);margin-bottom:8px}
-.meta{color:var(--muted);font-size:.9rem;margin-bottom:32px}
-.doc h2{font-size:1.2rem;margin:34px 0 10px;padding-top:6px}
-.doc h3{font-size:1rem;font-family:var(--head);margin:18px 0 6px}
-.doc p,.doc li{color:color-mix(in srgb,var(--text) 82%,var(--muted));font-size:.98rem}
-.doc p{margin-bottom:12px}
-.doc ul{margin:6px 0 14px 22px}
-.doc li{margin-bottom:5px}
-.doc address{font-style:normal;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--blue);
-  border-radius:10px;padding:16px 20px;margin-top:10px;font-size:.96rem;line-height:1.8}
-
-/* about */
-.about-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin:28px 0}
-.about-grid div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
-.about-grid h3{margin:0 0 6px;font-size:1.02rem}
-.about-grid p{margin:0;font-size:.93rem}
-
-/* contact */
-.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:28px;margin-top:10px}
-.info div{margin-bottom:20px}
-.info b{display:block;font-family:var(--head);font-size:.95rem;margin-bottom:2px}
-.info span,.info a{color:var(--muted);font-size:.96rem}
-form{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
-label{display:block;font-weight:600;font-size:.88rem;margin:0 0 6px}
-input,textarea{width:100%;background:var(--surface);color:var(--text);border:1px solid var(--line);border-radius:8px;
-  padding:11px 13px;font:inherit;margin-bottom:16px}
-textarea{min-height:130px;resize:vertical}
-
-/* app-ads */
-
-footer{border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
-.foot-in{max-width:1080px;margin:0 auto;padding:28px 20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.foot-in nav{margin:0}
-.foot-in a{color:var(--muted);font-size:.85rem;padding:4px 8px}
-
-@media (max-width:760px){
-  .hero{grid-template-columns:1fr;padding-top:48px}
-  .orbit{max-width:260px;order:-1}
-  .contact{grid-template-columns:1fr}
-  nav{margin-left:0;width:100%}
-}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font:16px/1.7 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+header.top{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:10}
+.top .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px;padding-top:12px;padding-bottom:12px}
+.brand{font:700 1.05rem Georgia,"Times New Roman",serif;color:var(--ink);text-decoration:none}
+.top nav{display:flex;flex-wrap:wrap;gap:4px 16px;margin-left:auto}
+.top nav a{color:var(--muted);text-decoration:none;font-size:.92rem}
+.top nav a:hover{color:var(--accent);text-decoration:underline}
+.intro{padding:64px 0 36px;border-bottom:1px solid var(--line)}
+h1{font:700 clamp(1.9rem,5vw,2.8rem)/1.15 Georgia,"Times New Roman",serif;letter-spacing:-.01em;max-width:20ch}
+.intro p{margin-top:16px;color:var(--muted);max-width:62ch}
+section{padding:44px 0;border-bottom:1px solid var(--line)}
+h2{font:700 1.6rem Georgia,"Times New Roman",serif;margin-bottom:14px}
+h3{font-size:1.02rem;margin:22px 0 6px}
+p,li{color:var(--ink);opacity:.9}
+p{margin-bottom:12px;max-width:72ch}
+ul{margin:6px 0 14px 22px;max-width:72ch}
+li{margin-bottom:5px}
+.games{margin-top:10px;border-top:1px solid var(--line)}
+.game{display:grid;grid-template-columns:1fr 1fr;gap:6px 28px;padding:20px 0;border-bottom:1px solid var(--line)}
+.game h3{margin:0;font:700 1.2rem Georgia,"Times New Roman",serif}
+.game p{margin:0;color:var(--muted)}
+.pkg{font:.82rem ui-monospace,Menlo,Consolas,monospace;color:var(--muted);word-break:break-all}
+.where{grid-column:1/-1;font-size:.9rem}
+dl{display:grid;grid-template-columns:170px 1fr;gap:10px 18px;margin-top:8px;max-width:72ch}
+dt{color:var(--muted);font-size:.92rem}
+dd{margin:0}
+address{font-style:normal;background:var(--panel);border-left:3px solid var(--accent);padding:14px 18px;margin-top:10px;max-width:72ch}
+.meta{color:var(--muted);font-size:.92rem;margin-bottom:18px}
+footer{padding:30px 0 50px;color:var(--muted);font-size:.9rem}
+footer a{margin-right:14px}
+@media (max-width:640px){.game{grid-template-columns:1fr}dl{grid-template-columns:1fr;gap:2px}dt{margin-top:8px}.top nav{margin-left:0}}
 </style>
 </head>
 <body>
 
-<header class="bar"><div class="bar-in">
-  <a class="logo" href="#home"><i></i>Universe Games Studio</a>
-  <nav id="nav" aria-label="Main">
-    <a href="#home">Home</a><a href="#about">About Us</a><a href="#contact">Contact Us</a>
-    <a href="#privacy">Privacy Policy</a><a href="#terms">Terms &amp; Conditions</a>
-  </nav>
+<header class="top"><div class="wrap">
+<a class="brand" href="#top">Universe Games Studio</a>
+<nav aria-label="Main">
+<a href="#games">Games</a><a href="#about">About</a><a href="/privacy-policy">Privacy Policy</a><a href="/terms-and-conditions">Terms</a><a href="#contact">Contact</a>
+</nav>
 </div></header>
 
-<main>
+<main id="top">
+<div class="wrap">
 
-<!-- HOME -->
-<section class="page" id="home">
-  <div class="hero">
-    <div>
-      <span class="reg">SECP registered · Lahore, Pakistan</span>
-      <h1>We build mobile games that feel like their own universe.</h1>
-      <p class="lead">Universe Games Studio (UGS) (SMC-Private) Limited is an independent game development and publishing company. We design, build and publish mobile games on the Unity Engine for players around the world.</p>
-      <div class="btns"><a class="btn" href="#about">About the studio</a><a class="btn ghost" href="#contact">Contact us</a></div>
-    </div>
-    <div class="orbit" aria-hidden="true">
-      <svg viewBox="0 0 400 400">
-        <defs><radialGradient id="g" cx="35%" cy="30%"><stop offset="0" stop-color="#bfdbfe"/><stop offset=".5" stop-color="#3b82f6"/><stop offset="1" stop-color="#1e3a8a"/></radialGradient></defs>
-        <circle cx="200" cy="200" r="150" fill="none" stroke="currentColor" stroke-opacity=".18" stroke-dasharray="3 7"/>
-        <circle cx="200" cy="200" r="95" fill="none" stroke="currentColor" stroke-opacity=".18"/>
-        <circle cx="200" cy="200" r="52" fill="url(#g)"/>
-        <g class="spin"><circle cx="350" cy="200" r="16" fill="#34d399"/></g>
-        <g class="spin rev"><circle cx="105" cy="200" r="11" fill="#f59e0b"/></g>
-        <g class="spin"><circle cx="200" cy="50" r="7" fill="currentColor" fill-opacity=".7"/></g>
-      </svg>
-    </div>
-  </div>
+<div class="intro">
+<h1>Mobile puzzle and casual games, made in Lahore.</h1>
+<p>Universe Games Studio (UGS) (SMC-Private) Limited is an independent game developer and publisher incorporated in Pakistan. We build our games in the Unity Engine and publish them on Android app stores.</p>
+</div>
 
-  <div class="sec">
-    <h2>Our games</h2>
-    <p class="sub">Free-to-play mobile games, supported by ads and optional in-app purchases.</p>
-    <div class="games">
-      <article class="game"><div class="tag">Mobile game</div><h3>Arrow Out</h3>
-        <p>A quick, satisfying puzzle experience built for short sessions on any phone.</p></article>
-      <article class="game"><div class="tag">Mobile game · Samsung Galaxy Store</div><h3>Animal Kingdom: Merge Animal</h3>
-        <p>Merge animals, unlock new creatures and grow your own kingdom.</p></article>
-    </div>
-  </div>
-
-  <div class="facts">
-    <div><b>Game design &amp; prototyping</b><span>Original ideas turned into playable games.</span></div>
-    <div><b>Unity Engine</b><span>Stable, scalable, cross-platform builds.</span></div>
-    <div><b>Concept to publishing</b><span>Launch, support and ongoing improvement.</span></div>
-  </div>
+<section id="games">
+<h2>Our games</h2>
+<p>All games are free to play and supported by ads. Some include optional in-app purchases.</p>
+<div class="games">
+<article class="game">
+<div><h3>Arrow Out: Block Tap Away</h3><span class="pkg">com.gs.ugs.tapout.arrowgame (Samsung)<br>com.amz.ugs.tapout.arrowgame (Amazon)</span></div>
+<p>A 3D puzzle game. Tap each arrow block in the right order so it can slide away without hitting another block.</p>
+<p class="where">Available on <a href="https://galaxystore.samsung.com/detail/com.gs.ugs.tapout.arrowgame" rel="noopener">Samsung Galaxy Store</a>, Amazon Appstore and Huawei AppGallery.</p>
+</article>
+<article class="game">
+<div><h3>Animal Kingdom: Merge Animal</h3></div>
+<p>A merge game. Combine matching animals to unlock new creatures and grow your kingdom.</p>
+<p class="where">Available on Samsung Galaxy Store.</p>
+</article>
+<article class="game">
+<div><h3>Snake Escape: Slither Maze</h3><span class="pkg">com.gs.ugs.snakeout.games</span></div>
+<p>A 3D maze puzzle. Guide each snake out of a tangled board without blocking the others.</p>
+<p class="where">Available on <a href="https://galaxystore.samsung.com/detail/com.gs.ugs.snakeout.games" rel="noopener">Samsung Galaxy Store</a>.</p>
+</article>
+</div>
 </section>
 
-<!-- ABOUT -->
-<section class="page" id="about">
-  <div class="doc">
-    <h1>About Us</h1>
-    <p class="meta">Welcome to Universe Games Studio (UGS) (SMC-Private) Limited</p>
-    <h2>Overview</h2>
-    <p>Universe Games Studio (UGS) (SMC-Private) Limited is a premier, independent game development and publishing firm incorporated in Lahore, Pakistan. As a registered entity under the Securities and Exchange Commission of Pakistan (SECP), we operate with a commitment to legal transparency and professional excellence in the digital entertainment industry.</p>
-    <h2>Our core expertise</h2>
-    <p>Driven by a passion for innovation and storytelling, we specialize in the end-to-end lifecycle of high-quality mobile applications and interactive software. Our studio uses industry-standard technologies to deliver seamless experiences to a global audience.</p>
-    <div class="about-grid">
-      <div><h3>Game design &amp; prototyping</h3><p>Transforming original intellectual property into engaging, playable digital experiences.</p></div>
-      <div><h3>Engine excellence</h3><p>Advanced development using the Unity Engine for robust, scalable, cross-platform performance.</p></div>
-      <div><h3>Product lifecycle management</h3><p>From initial concept to global publishing and continuous post-launch optimization.</p></div>
-    </div>
-    <h2>Our vision &amp; commitment</h2>
-    <p>At UGS, we believe games are digital universes. Our mission is to bridge the gap between complex technology and pure entertainment. Every project in our portfolio goes through rigorous quality assurance to meet international standards of performance and user engagement.</p>
-    <h2>Corporate identity</h2>
-    <p>We are dedicated to expanding our footprint in the global mobile gaming ecosystem through strategic partnerships and innovative software solutions. Our commitment remains steadfast: delivering joy and high-value content to users worldwide while maintaining the highest standards of professional integrity.</p>
-  </div>
+<section id="about">
+<h2>About us</h2>
+<p>Universe Games Studio (UGS) (SMC-Private) Limited is a game development and publishing company incorporated in Lahore, Pakistan, and registered with the Securities and Exchange Commission of Pakistan (SECP).</p>
+<p>We design, build, test and publish our own mobile games, and we keep them updated after launch. Every game is tested for stability and performance on a range of Android devices before release.</p>
+<dl>
+<dt>Legal name</dt><dd>Universe Games Studio (UGS) (SMC-Private) Limited</dd>
+<dt>Location</dt><dd>Lahore, Punjab, Pakistan</dd>
+<dt>Engine</dt><dd>Unity</dd>
+<dt>Platforms</dt><dd>Android (Samsung Galaxy Store, Amazon Appstore, Huawei AppGallery)</dd>
+</dl>
 </section>
 
-<!-- CONTACT -->
-<section class="page" id="contact">
-  <div class="doc" style="max-width:none">
-    <h1>Contact Us</h1>
-    <p class="meta">Questions about our games, partnerships or your data? Write to us.</p>
-    <div class="contact">
-      <div class="info">
-        <div><b>Email</b><a href="mailto:info@universegamesstudio.com">info@universegamesstudio.com</a></div>
-        <div><b>Company</b><span>Universe Games Studio (UGS) (SMC-Private) Limited</span></div>
-        <div><b>Address</b><span>House No. D-201, Muhallah Chiri Maran,<br>Inside Mori Gate, Lahore, Pakistan</span></div>
-        <div><b>Data requests</b><span>To access, correct or delete your data, email us with the subject “Data request”.</span></div>
-      </div>
-      <form id="cf">
-        <label for="n">Your name</label><input id="n" required>
-        <label for="e">Your email</label><input id="e" type="email" required>
-        <label for="m">Message</label><textarea id="m" required></textarea>
-        <button class="btn" type="submit">Send message</button>
-      </form>
-    </div>
-  </div>
+<section id="privacy">
+<span id="privacy-policy"></span>
+<h2>Privacy Policy</h2>
+<p class="meta">Effective March 23, 2026. Last updated November 21, 2026.</p>
+
+<h3>1. Who we are</h3>
+<p>This policy explains how Universe Games Studio (UGS) (SMC-Private) Limited (“we”, “us”, “our”) handles information when you play our games: Arrow Out: Block Tap Away, Animal Kingdom Merge Animal and Snake Escape: Slither Maze (the “Games”). By installing or playing a Game, you agree to this policy.</p>
+
+<h3>2. Information we collect</h3>
+<p>The Games and the third-party services inside them may automatically collect:</p>
+<ul>
+<li>Device model and operating system version.</li>
+<li>IP address, used to estimate your country.</li>
+<li>Device language and time zone.</li>
+<li>Advertising identifiers, such as the Google Advertising ID or Samsung advertising ID.</li>
+<li>Gameplay data, such as levels reached, scores and in-game events.</li>
+<li>Crash and performance reports.</li>
+</ul>
+<p>We do not ask you to create an account and we do not collect your name, phone number or precise location.</p>
+
+<h3>3. In-app purchases</h3>
+<p>Purchases are processed by the app store you use (for example Samsung Galaxy Store or Amazon Appstore). We never see or store your card or bank details. We only receive confirmation of the item bought, the time and your country.</p>
+
+<h3>4. Advertising</h3>
+<p>The Games show third-party ads. These partners may use your advertising ID and IP address to show ads and to prevent fraud. Each partner has its own privacy policy:</p>
+<ul>
+<li><a href="https://www.inmobi.com/privacy-policy" rel="noopener">InMobi</a></li>
+<li><a href="https://unity.com/legal/privacy-policy" rel="noopener">Unity Ads</a></li>
+<li><a href="https://www.applovin.com/privacy/" rel="noopener">AppLovin MAX</a></li>
+<li><a href="https://www.mintegral.com/en/privacy" rel="noopener">Mintegral</a></li>
+<li><a href="https://policies.google.com/privacy" rel="noopener">Google AdMob</a></li>
+<li><a href="https://www.toponad.com/en/privacy-policy" rel="noopener">TopOn (ad mediation)</a></li>
+</ul>
+<p>You can limit ad personalization on Android: Settings &gt; Google &gt; Ads &gt; Delete advertising ID (menu names vary by device).</p>
+
+<h3>5. How we use information</h3>
+<ul>
+<li>To run the Games and keep them stable.</li>
+<li>To save your progress on your device.</li>
+<li>To find and fix bugs.</li>
+<li>To show ads and measure how they perform.</li>
+<li>To confirm in-app purchases.</li>
+</ul>
+
+<h3>6. Sharing</h3>
+<p>We share information only with our advertising and analytics partners listed above, and with authorities when the law requires it. We do not sell your personal information.</p>
+
+<h3>7. Children</h3>
+<p>The Games are for a general audience and are not directed at children under 13. We do not knowingly collect personal data from children. If you think a child has given us personal data, email us and we will delete it.</p>
+
+<h3>8. Retention and transfers</h3>
+<p>We keep information only as long as needed to run the Games, meet legal duties or settle disputes. Our partners may process data on servers outside your country.</p>
+
+<h3>9. Your rights</h3>
+<p>Depending on where you live, you may ask to access, correct or delete the data we hold about you. Email <a href="mailto:info@universegamesstudio.com">info@universegamesstudio.com</a> with the subject “Data request”.</p>
+
+<h3>10. Security</h3>
+<p>We use reasonable technical measures to protect information. No method of storage or transmission is completely secure.</p>
+
+<h3>11. Changes</h3>
+<p>If we change this policy, we will update the “Last updated” date above.</p>
+
+<h3>12. Contact</h3>
+<address>Universe Games Studio (UGS) (SMC-Private) Limited<br>House No. D-201, Muhallah Chiri Maran, Inside Mori Gate, Lahore, Pakistan<br><a href="mailto:info@universegamesstudio.com">info@universegamesstudio.com</a></address>
 </section>
 
-<!-- PRIVACY -->
-<section class="page" id="privacy">
-  <div class="doc">
-    <h1>Privacy Policy</h1>
-    <p class="meta">Developer: Universe Games Studio (UGS) (SMC-Private) Limited<br>Effective date: March 23, 2026 · Last updated: March 23, 2026</p>
-    <h2>1. Introduction</h2>
-    <p>This Privacy Policy explains how Universe Games Studio (UGS) (SMC-Private) Limited (“we”, “us” or “our”) manages your information when you use our mobile applications, including Animal Kingdom Merge Animal (the “Game”). By installing or using our Game, you agree to the terms described in this policy.</p>
-    <h2>2. Information we collect</h2>
-    <h3>2.1 Automatically collected information</h3>
-    <p>When you use our Game, our systems may automatically capture:</p>
-    <ul><li>Device hardware model and operating system (OS) version.</li><li>IP address (used to determine general country-level location).</li><li>Device language settings and time zone.</li><li>Unique advertising identifiers (for example, Google Advertising ID or Samsung ID).</li><li>Gameplay metrics, including scores, levels reached and in-game events.</li><li>Diagnostic crash reports to identify technical failures.</li></ul>
-    <h3>2.2 In-app purchases</h3>
-    <p>All financial transactions are processed securely through the Samsung Galaxy Store (or the respective platform store). We do not store or have access to your credit card or banking details. We only receive basic confirmation data, such as:</p>
-    <ul><li>The item purchased.</li><li>The date and time of the transaction.</li><li>The user’s country.</li></ul>
-    <h3>2.3 Customer support</h3>
-    <p>If you contact us for help, we may collect:</p>
-    <ul><li>Your email address.</li><li>The details and history of your request.</li></ul>
-    <h2>3. Advertising &amp; mediation</h2>
-    <p>To keep our games free to play, we display third-party advertisements. Our Game uses the following platforms:</p>
-    <ul><li>Unity Ads</li><li>AppLovin MAX</li><li>Google AdMob</li><li>Mintegral</li></ul>
-    <p>These partners may use your Advertising ID and IP address to deliver relevant ads and prevent fraudulent activity. Each partner operates under its own independent privacy policy.</p>
-    <h2>4. How we use your data</h2>
-    <ul><li>To make sure the Game works correctly on your device.</li><li>To synchronize and save your gameplay progress across sessions.</li><li>To troubleshoot bugs and improve overall stability.</li><li>To deliver and optimize advertising content.</li><li>To verify and process in-app purchases.</li></ul>
-    <h2>5. Children’s privacy</h2>
-    <p>Our Game is intended for a general audience and is not directed at children under the age of 13. We do not knowingly collect personal data from minors. If you believe a child has given us personal information, please contact us immediately so we can remove it.</p>
-    <h2>6. Data sharing</h2>
-    <p>We share information only with:</p>
-    <ul><li>Authorized advertising partners.</li><li>Performance and analytics service providers.</li><li>Legal authorities, if required by law or official regulations.</li></ul>
-    <p>We do not sell your personal information to third parties for monetary gain.</p>
-    <h2>7. Data retention</h2>
-    <p>We keep your information only for as long as necessary to provide the Game services, comply with legal obligations or resolve disputes.</p>
-    <h2>8. Your rights</h2>
-    <p>Depending on your jurisdiction, you have the right to:</p>
-    <ul><li>Access the data we hold about you.</li><li>Correct any inaccurate information.</li><li>Request the permanent deletion of your data.</li></ul>
-    <p>To exercise these rights, email <a href="mailto:info@universegamesstudio.com">info@universegamesstudio.com</a>.</p>
-    <h2>9. Managing ads</h2>
-    <p>You can control how ads are served to you. You can reset your Advertising ID or opt out of personalized ads in your device settings:</p>
-    <ul><li>Android: Settings &gt; Google &gt; Ads &gt; Reset Advertising ID.</li></ul>
-    <h2>10. Security</h2>
-    <p>We use industry-standard technical measures to protect your information. However, no method of electronic transmission or storage is 100% secure.</p>
-    <h2>11. International data transfers</h2>
-    <p>Because our games are available globally, your data may be processed on cloud servers outside your home country. We make sure appropriate safeguards are in place to protect your privacy.</p>
-    <h2>12. Changes to this policy</h2>
-    <p>We may update this Privacy Policy from time to time. Any changes will be shown by an updated “Last updated” date at the top of this page.</p>
-    <h2>13. Contact information</h2>
-    <address><b>Developer:</b> Universe Games Studio (UGS) (SMC-Private) Limited<br><b>Address:</b> House No. D-201, Muhallah Chiri Maran, Inside Mori Gate, Lahore<br><b>Email:</b> <a href="mailto:info@universegamesstudio.com">info@universegamesstudio.com</a></address>
-  </div>
+<section id="terms">
+<span id="terms-and-conditions"></span>
+<h2>Terms and Conditions</h2>
+<h3>1. Agreement</h3>
+<p>By using this website or our Games, you agree to these terms. If you do not agree, please do not use them.</p>
+<h3>2. Intellectual property</h3>
+<p>The Games, logos, graphics, audio and code belong to Universe Games Studio (UGS) (SMC-Private) Limited. You may not copy, sell or distribute them without our written permission.</p>
+<h3>3. Acceptable use</h3>
+<p>Use the Games and website lawfully. Do not:</p>
+<ul>
+<li>hack, or interfere with the security of, the Games;</li>
+<li>use bots or automated tools to access our services;</li>
+<li>reverse engineer or extract files from the Games.</li>
+</ul>
+<h3>4. Privacy</h3>
+<p>Your use of the Games is also covered by our <a href="#privacy">Privacy Policy</a>.</p>
+<h3>5. Liability</h3>
+<p>The Games are provided “as is”. To the extent the law allows, we are not responsible for technical problems, data loss or damages from using the Games or this website.</p>
+<h3>6. Changes</h3>
+<p>We may update these terms. Continuing to use the Games or website after an update means you accept the new terms.</p>
+<h3>7. Contact</h3>
+<p>Questions about these terms: <a href="mailto:info@universegamesstudio.com">info@universegamesstudio.com</a>.</p>
 </section>
 
-<!-- TERMS -->
-<section class="page" id="terms">
-  <div class="doc">
-    <h1>Terms &amp; Conditions</h1>
-    <p class="meta">Universe Games Studio (UGS) (SMC-Private) Limited</p>
-    <h2>1. Agreement to terms</h2>
-    <p>By accessing and using this website and our mobile games, you agree to be bound by these Terms and Conditions. If you do not agree, please do not use our services.</p>
-    <h2>2. Intellectual property rights</h2>
-    <p>All content, including games, logos (UGS), graphics and code, is the intellectual property of Universe Games Studio (UGS) (SMC-Private) Limited. You may not copy, reproduce or distribute any part of our games or website without our written permission.</p>
-    <h2>3. User conduct</h2>
-    <p>You agree to use our games and website for lawful purposes only. You must not:</p>
-    <ul><li>Attempt to hack or interfere with the security of our games.</li><li>Use automated systems (bots) to access our services.</li><li>Reverse engineer any of our game files.</li></ul>
-    <h2>4. Privacy &amp; data</h2>
-    <p>Your use of our services is also governed by our <a href="#privacy">Privacy Policy</a>. Please review it to understand how we collect and use information through third-party services.</p>
-    <h2>5. Limitation of liability</h2>
-    <p>Universe Games Studio (UGS) provides games “as is.” We are not responsible for any technical issues, data loss or damages resulting from the use of our applications or website.</p>
-    <h2>6. Changes to terms</h2>
-    <p>We may update these terms at any time. Your continued use of the website or games after changes are posted means you accept the new terms.</p>
-    <h2>7. Contact us</h2>
-    <address><b>Email:</b> <a href="mailto:info@universegamesstudio.com">info@universegamesstudio.com</a><br><b>Location:</b> House No. D-201, Muhallah Chiri Maran, Inside Mori Gate, Lahore</address>
-  </div>
+<section id="contact" style="border-bottom:0">
+<h2>Contact</h2>
+<p>For support, partnerships or data requests, email us. We reply on business days.</p>
+<dl>
+<dt>Email</dt><dd><a href="mailto:info@universegamesstudio.com">info@universegamesstudio.com</a></dd>
+<dt>Address</dt><dd>House No. D-201, Muhallah Chiri Maran, Inside Mori Gate, Lahore, Pakistan</dd>
+<dt>Hours</dt><dd>Monday to Friday, 9:00 AM to 6:00 PM (PKT)</dd>
+</dl>
 </section>
 
+</div>
 </main>
 
-<footer><div class="foot-in">
-  <span>© 2026 Universe Games Studio (UGS) (SMC-Private) Limited · Lahore, Pakistan</span>
-  <nav aria-label="Footer"><a href="#about">About Us</a><a href="#contact">Contact Us</a><a href="#privacy">Privacy Policy</a><a href="#terms">Terms &amp; Conditions</a></nav>
+<footer><div class="wrap">
+<p>© 2026 Universe Games Studio (UGS) (SMC-Private) Limited, Lahore, Pakistan.</p>
+<p><a href="/privacy-policy">Privacy Policy</a><a href="/terms-and-conditions">Terms</a><a href="/app-ads.txt">app-ads.txt</a></p>
 </div></footer>
 
-<script>
-(function(){
-  var ids=['home','about','contact','privacy','terms'];
-  function show(){
-    var h=(location.hash||'#home').slice(1);
-    if(ids.indexOf(h)<0)h='home';
-    ids.forEach(function(i){document.getElementById(i).classList.toggle('on',i===h)});
-    document.querySelectorAll('#nav a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+h)});
-    window.scrollTo(0,0);
-  }
-  window.addEventListener('hashchange',show);show();
-  document.getElementById('cf').addEventListener('submit',function(e){
-    e.preventDefault();
-    var n=document.getElementById('n').value,em=document.getElementById('e').value,m=document.getElementById('m').value;
-    location.href='mailto:info@universegamesstudio.com?subject='+encodeURIComponent('Website message from '+n)+
-      '&body='+encodeURIComponent(m+'\n\nFrom: '+n+' ('+em+')');
-  });
-})();
-</script>
 </body>
 </html>
