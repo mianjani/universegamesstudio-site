@@ -3,97 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Universe Games Studio | Free Mobile Puzzle &amp; Casual Games</title>
-<meta name="description" content="Universe Games Studio (UGS) (SMC-Private) Limited, Lahore, Pakistan. Free mobile games: Arrow Out, Animal Kingdom Merge Animal and Snake Escape.">
+<title>Universe Games Studio | Play Free Browser Games</title>
+<meta name="description" content="Play free HTML5 and WebGL games instantly in your browser. No download. By Universe Games Studio (UGS) (SMC-Private) Limited, Lahore.">
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-
-<header class="bar"><div class="bar-in">
-<a class="logo" href="/"><i></i>Universe Games</a>
-<div class="search"><input id="q" type="search" placeholder="Search games" aria-label="Search games"></div>
-<nav class="toplinks" aria-label="Main"><a href="#about">About</a><a href="/privacy-policy">Privacy Policy</a><a href="/terms-and-conditions">Terms</a><a href="#contact">Contact</a></nav>
+<header class="bar"><div class="in">
+<a class="logo" href="#/"><i></i>Universe Games</a>
+<input id="q" type="search" data-p="search" aria-label="Search">
+<nav><a href="#/" data-i="games"></a><a href="#/dev" data-i="dev"></a><a href="#/legal/privacy" data-i="legal"></a></nav>
+<select id="lang" aria-label="Language"><option value="en">English</option><option value="ur">اردو</option><option value="es">Español</option></select>
 </div></header>
-
-<div class="shell">
-<aside class="side" aria-label="Categories">
-<button data-c="all" aria-pressed="true">All games</button>
-<button data-c="puzzle" aria-pressed="false">Puzzle</button>
-<button data-c="casual" aria-pressed="false">Casual</button>
-<button data-c="merge" aria-pressed="false">Merge</button>
-</aside>
-
-<main>
-<h1>Free games from Universe Games Studio</h1>
-<p class="sub">Tap a game to see details and where to download it.</p>
-<div class="grid" id="grid">
-
-<button class="tile big" data-c="puzzle" data-n="arrow out block tap away" data-d="d-arrow">
-<svg viewBox="0 0 200 200" aria-hidden="true"><rect width="200" height="200" fill="#ff6b3d"/><rect x="30" y="30" width="140" height="140" rx="26" fill="#ffb347"/><path d="M60 100h66M104 70l34 30-34 30" fill="none" stroke="#14123a" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/></svg>
-<span>Arrow Out: Block Tap Away</span></button>
-
-<button class="tile" data-c="merge casual" data-n="animal kingdom merge animal" data-d="d-animal">
-<svg viewBox="0 0 200 200" aria-hidden="true"><rect width="200" height="200" fill="#2fbf71"/><circle cx="62" cy="62" r="22" fill="#d79a4f"/><circle cx="138" cy="62" r="22" fill="#d79a4f"/><circle cx="100" cy="106" r="52" fill="#f2b866"/><circle cx="82" cy="98" r="7" fill="#14123a"/><circle cx="118" cy="98" r="7" fill="#14123a"/><ellipse cx="100" cy="122" rx="14" ry="10" fill="#14123a"/></svg>
-<span>Animal Kingdom: Merge Animal</span></button>
-
-<button class="tile" data-c="puzzle" data-n="snake escape slither maze" data-d="d-snake">
-<svg viewBox="0 0 200 200" aria-hidden="true"><rect width="200" height="200" fill="#6a4cff"/><path d="M40 150h70a30 30 0 0 0 0-60H80a20 20 0 0 1 0-40h70" fill="none" stroke="#7dffb0" stroke-width="22" stroke-linecap="round"/><circle cx="150" cy="50" r="5" fill="#14123a"/></svg>
-<span>Snake Escape: Slither Maze</span></button>
-
-</div>
-<p class="empty" id="none" hidden>No games match your search.</p>
-</main>
-</div>
-
-<dialog id="d-arrow"><button class="close" data-x>Close</button>
-<div class="d-art"><svg viewBox="0 0 400 170" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="170" fill="#ff6b3d"/><rect x="150" y="25" width="100" height="120" rx="24" fill="#ffb347"/><path d="M172 85h44M200 65l22 20-22 20" fill="none" stroke="#14123a" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-<div class="d-body"><h2>Arrow Out: Block Tap Away</h2>
-<p>A 3D puzzle game. Tap each arrow block in the right order so it can slide away without hitting another block.</p>
-<div class="pkg">com.gs.ugs.tapout.arrowgame (Samsung)<br>com.amz.ugs.tapout.arrowgame (Amazon)</div>
-<a class="btn" href="https://galaxystore.samsung.com/detail/com.gs.ugs.tapout.arrowgame" target="_blank" rel="noopener">Samsung Galaxy Store</a>
-<p style="margin:0;font-size:.88rem">Also on Amazon Appstore and Huawei AppGallery.</p></div></dialog>
-
-<dialog id="d-animal"><button class="close" data-x>Close</button>
-<div class="d-art"><svg viewBox="0 0 400 170" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="170" fill="#2fbf71"/><circle cx="170" cy="55" r="22" fill="#d79a4f"/><circle cx="230" cy="55" r="22" fill="#d79a4f"/><circle cx="200" cy="95" r="48" fill="#f2b866"/><circle cx="184" cy="88" r="6" fill="#14123a"/><circle cx="216" cy="88" r="6" fill="#14123a"/><ellipse cx="200" cy="108" rx="12" ry="9" fill="#14123a"/></svg></div>
-<div class="d-body"><h2>Animal Kingdom: Merge Animal</h2>
-<p>A merge game. Combine matching animals to unlock new creatures and grow your kingdom.</p>
-<p style="margin:0;font-size:.88rem">Available on Samsung Galaxy Store.</p></div></dialog>
-
-<dialog id="d-snake"><button class="close" data-x>Close</button>
-<div class="d-art"><svg viewBox="0 0 400 170" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="170" fill="#6a4cff"/><path d="M120 130h110a28 28 0 0 0 0-56h-60a18 18 0 0 1 0-36h100" fill="none" stroke="#7dffb0" stroke-width="20" stroke-linecap="round"/></svg></div>
-<div class="d-body"><h2>Snake Escape: Slither Maze</h2>
-<p>A 3D maze puzzle. Guide each snake out of a tangled board without blocking the others.</p>
-<div class="pkg">com.gs.ugs.snakeout.games</div>
-<a class="btn" href="https://galaxystore.samsung.com/detail/com.gs.ugs.snakeout.games" target="_blank" rel="noopener">Samsung Galaxy Store</a></div></dialog>
-
-<div class="info">
-<section id="about"><h2>About us</h2>
-<p>Universe Games Studio (UGS) (SMC-Private) Limited is an independent game developer and publisher incorporated in Lahore, Pakistan, and registered with the Securities and Exchange Commission of Pakistan (SECP).</p>
-<p>We build our games in the Unity Engine and publish them on Android app stores.</p></section>
-<section id="contact"><h2>Contact</h2>
-<p>Email: <a href="mailto:info@universegamesstudio.com">info@universegamesstudio.com</a></p>
-<p>House No. D-201, Muhallah Chiri Maran, Inside Mori Gate, Lahore, Pakistan</p>
-<p>Monday to Friday, 9:00 AM to 6:00 PM (PKT)</p></section>
-<section><h2>Legal</h2>
-<p><a href="/privacy-policy">Privacy Policy</a></p>
-<p><a href="/terms-and-conditions">Terms and Conditions</a></p>
-<p><a href="/app-ads.txt">app-ads.txt</a></p></section>
-</div>
-
-<footer><div class="foot">
-<span>© 2026 Universe Games Studio (UGS) (SMC-Private) Limited, Lahore, Pakistan.</span>
-<span><a href="/privacy-policy">Privacy Policy</a><a href="/terms-and-conditions">Terms and Conditions</a><a href="mailto:info@universegamesstudio.com">Contact</a></span>
+<main id="app"></main>
+<footer><div class="in">
+<span>© 2026 Universe Games Studio (UGS) (SMC-Private) Limited, Lahore, Pakistan</span>
+<span><a href="#/legal/privacy">Privacy</a> <a href="#/legal/cookies">Cookies</a> <a href="#/legal/terms">Terms</a> <a href="#/legal/takedown">Takedown</a> <a href="#/legal/faq">FAQ</a> <a href="#/legal/contact">Contact</a></span>
 </div></footer>
-
-<script>
-(function(){
-var tiles=[].slice.call(document.querySelectorAll('.tile')),btns=[].slice.call(document.querySelectorAll('.side button')),q=document.getElementById('q'),cat='all';
-function apply(){var s=q.value.trim().toLowerCase(),n=0;tiles.forEach(function(t){var ok=(cat==='all'||t.dataset.c.indexOf(cat)>-1)&&(!s||t.dataset.n.indexOf(s)>-1);t.hidden=!ok;if(ok)n++});document.getElementById('none').hidden=n>0}
-q.addEventListener('input',apply);
-btns.forEach(function(b){b.addEventListener('click',function(){cat=b.dataset.c;btns.forEach(function(x){x.setAttribute('aria-pressed',x===b)});apply()})});
-tiles.forEach(function(t){t.addEventListener('click',function(){var d=document.getElementById(t.dataset.d);if(d.showModal)d.showModal();else d.setAttribute('open','')})});
-[].forEach.call(document.querySelectorAll('dialog'),function(d){d.addEventListener('click',function(e){if(e.target===d||e.target.hasAttribute('data-x'))d.close()})});
-})();
-</script>
+<script src="/app.js"></script>
 </body>
 </html>
